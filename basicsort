@@ -1,0 +1,45 @@
+//Bubble
+public static int[] bubbleSort(int[] myArray){
+	    for(int i = myArray.length-1 ; i >= 0 ; i--){
+	        for(int j=i-1 ; j >= 0 ; j--) {
+   	        if(myArray[i] < myArray[j]){
+    	            int temp = myArray[i] ;
+    	            myArray[i]  = myArray[j] ;
+    	            myArray[j]  = temp;
+    	        }
+	        }
+	    }
+	    return myArray;
+	}
+ // Selection
+ public static void selectionSort(int[] myArray){
+	    for(int i = 0 ; i < myArray.length ; i++){
+	        int minIndex = i ;
+	        for( int j = i+1 ; j < myArray.length ; j++){
+	            if(myArray[minIndex] > myArray[j]){
+	                minIndex = j;
+	            }
+	        }
+	        if(minIndex != i){
+	            int temp = myArray[i];
+	            myArray[i] =myArray[minIndex];
+	            myArray[minIndex] = temp;
+	        }
+	    }
+	}
+ // Insertion
+ 	public static void insertionSort(int[] myArray){
+	    for(int i = 1 ; i < myArray.length ; i++){
+	        int currentIndex = i;
+	        for(int j = i-1 ; j >=0 ; j--){
+	            if(myArray[currentIndex] < myArray[j]){
+	                int temp = myArray[j] ;
+	                myArray[j] = myArray[currentIndex];
+	                myArray[currentIndex] = temp;
+	                currentIndex = j ;
+	                
+	            }
+	        }
+	    }
+	}
+ 
